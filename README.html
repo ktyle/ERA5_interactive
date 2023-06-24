@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>(Replace_with_your_title) Cookbook &#8212; Project Pythia Cookbook Template</title>
+    <title>ARCO ERA-5 Interactive Visualization Cookbook &#8212; ARCO ERA-5 Interactive Visualization</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Project Pythia Notebook Template" href="notebooks/notebook-template.html" />
+    <link rel="next" title="01_BasicVisualization" href="notebooks/01BasicVisualization.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -181,19 +181,24 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
-   (Replace_with_your_title) Cookbook
+   ARCO ERA-5 Interactive Visualization Cookbook
   </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Introduction
+  Visualization notebooks
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks/notebook-template.html">
-   Project Pythia Notebook Template
+  <a class="reference internal" href="notebooks/01BasicVisualization.html">
+   01_BasicVisualization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks/02InteractiveVisualization.html">
+   02_InteractiveVisualization Part 1: Geoviews
   </a>
  </li>
 </ul>
@@ -250,14 +255,14 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/ProjectPythia/cookbook-template/"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/ProjectPythia/ERA5_interactive/"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProjectPythia/cookbook-template//issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProjectPythia/ERA5_interactive//issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/cookbook-template/edit/main/README.md"><button
+        <a class="edit-button" href="https://github.com/ProjectPythia/ERA5_interactive/edit/main/README.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -305,13 +310,13 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-1-replace-with-the-title-of-this-section-e-g-foundations">
-     Section 1 ( Replace with the title of this section, e.g. “Foundations” )
+    <a class="reference internal nav-link" href="#section-1-basic-visualization">
+     Section 1 ( “Basic Visualization”)
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-2-replace-with-the-title-of-this-section-e-g-example-workflows">
-     Section 2 ( Replace with the title of this section, e.g. “Example workflows” )
+    <a class="reference internal nav-link" href="#section-2-interactive-visualization-1">
+     Section 2 ( “Interactive Visualization 1” )
     </a>
    </li>
   </ul>
@@ -345,18 +350,57 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
               <div>
                 
   <a class="reference internal image-reference" href="_images/thumbnail.png"><img alt="thumbnail" src="_images/thumbnail.png" style="width: 300px;" /></a>
-<div class="tex2jax_ignore mathjax_ignore section" id="replace-with-your-title-cookbook">
-<h1>(Replace_with_your_title) Cookbook<a class="headerlink" href="#replace-with-your-title-cookbook" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
-<p><a class="reference external" href="https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml"><img alt="nightly-build" src="https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg" /></a>
-<a class="reference external" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks"><img alt="Binder" src="https://binder.projectpythia.org/badge_logo.svg" /></a></p>
-<p>This Project Pythia Cookbook covers … (replace <code class="docutils literal notranslate"><span class="pre">...</span></code> with the main subject of your cookbook … e.g., <em>working with radar data in Python</em>)</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="arco-era-5-interactive-visualization-cookbook">
+<h1>ARCO ERA-5 Interactive Visualization Cookbook<a class="headerlink" href="#arco-era-5-interactive-visualization-cookbook" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<p><a class="reference external" href="https://github.com/ProjectPythia/ERA5_Interactive/actions/workflows/nightly-build.yaml"><img alt="nightly-build" src="https://github.com/ProjectPythia/ERA5_Interactive/actions/workflows/nightly-build.yaml/badge.svg" /></a>
+<a class="reference external" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/ERA5_Interactive/main?labpath=notebooks"><img alt="Binder" src="https://binder.projectpythia.org/badge_logo.svg" /></a></p>
+<p>A team at <a class="reference external" href="https://research.google/">Google Research &amp; Cloud</a> are making parts of the <a class="reference external" href="https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5">ECMWF Reanalysis version 5</a> (aka <strong>ERA-5</strong>) accessible in a <a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fclim.2021.782909/full">Analysis Ready, Cloud Optimized</a> (aka <strong>ARCO</strong>) format.</p>
+<p>This Project Pythia Cookbook covers accessing, regridding, and visualizing this reanalysis data.</p>
 <div class="section" id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>(Add a few sentences stating why this cookbook will be useful. What skills will you, “the chef”, gain once you have reached the end of the cookbook?)</p>
+<p>The ERA-5 represents the current state-of-the-art meteorological reanalysis, extending from well back into the 20th century to the present. While the data is freely-available for download by archival centers such as <a class="reference external" href="https://www.copernicus.eu/en">Copernicus</a> and <a class="reference external" href="https://rda.ucar.edu/">RDA</a>, the data format and directory structure are typically not well-suited for interactive exploration. Specifically, parameters of interest are stored in individual files, for a limited period of time.</p>
+<p>A team at Google Cloud and Research has made interactive exploration much more tenable by representing the data in <a class="reference external" href="https://zarr.readthedocs.io/en/stable/">Zarr</a> format. Each Zarr file represents a specific “class” of meteorological data, such as:</p>
+<ol class="arabic simple">
+<li><p>Model Level Wind</p></li>
+<li><p>Model Level Moisture</p></li>
+<li><p>Single Level Surface</p></li>
+<li><p>Single Level Reanalysis</p></li>
+<li><p>Single Level Forecast</p></li>
+</ol>
+<p>Within each Zarr file, a variety of meteorological parameters, spanning the current period of record (1 January 1979 –&gt; 31 August 2021) of the ARCO ERA-5 repository exist.</p>
+<p>In the notebooks which comprise this Cookbook, we demonstrate the following:</p>
+<ol class="arabic simple">
+<li><p>Access parameters of interest from the Zarr store</p></li>
+<li><p>Regrid from model native (Guassian) to lat-lon (Cartesian) coordinates</p></li>
+<li><p>Plot a map at a specific time using Matplotlib and Cartopy</p></li>
+<li><p>Create interactive visualizations, leveraging the <a class="reference external" href="https://holoviz.org">Holoviz</a> ecosystem</p></li>
+</ol>
 </div>
 <div class="section" id="authors">
 <h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p><span class="xref myst">First Author</span>, <span class="xref myst">Second Author</span>, etc. <em>Acknowledge primary content authors here</em></p>
+<p><span class="xref myst">Kevin Tyle</span>, <span class="xref myst">Michael Barletta</span></p>
+<p>We also gratefully acknowledge the Google Cloud Research team for making an ARCO-friendly version of the ERA-5 available. Citations for their effort and the ERA-5 reanalysis are below:</p>
+<ul class="simple">
+<li><p>Carver, Robert W, and Merose, Alex. (2023): ARCO-ERA5: An Analysis-Ready Cloud-Optimized Reanalysis Dataset. 22nd Conf. on AI for Env. Science, Denver, CO, Amer. Meteo. Soc, 4A.1, https://ams.confex.com/ams/103ANNUAL/meetingapp.cgi/Paper/415842</p></li>
+<li><p>Hersbach, H., Bell, B., Berrisford, P., Hirahara, S., Horányi, A.,
+Muñoz‐Sabater, J., Nicolas, J., Peubey, C., Radu, R., Schepers, D.,
+Simmons, A., Soci, C., Abdalla, S., Abellan, X., Balsamo, G.,
+Bechtold, P., Biavati, G., Bidlot, J., Bonavita, M., De Chiara, G.,
+Dahlgren, P., Dee, D., Diamantakis, M., Dragani, R., Flemming, J.,
+Forbes, R., Fuentes, M., Geer, A., Haimberger, L., Healy, S.,
+Hogan, R.J., Hólm, E., Janisková, M., Keeley, S., Laloyaux, P.,
+Lopez, P., Lupu, C., Radnoti, G., de Rosnay, P., Rozum, I., Vamborg, F.,
+Villaume, S., Thépaut, J-N. (2017): Complete ERA5: Fifth generation of
+ECMWF atmospheric reanalyses of the global climate. Copernicus Climate
+Change Service (C3S) Data Store (CDS).
+Hersbach et al, (2017) was downloaded from the Copernicus Climate Change
+Service (C3S) Climate Data Store. We thank C3S for allowing us to
+redistribute the data.
+The results contain modified Copernicus Climate Change Service
+information 2022. Neither the European Commission nor ECMWF is
+responsible for any use that may be made of the Copernicus information
+or data it contains.</p></li>
+</ul>
 <div class="section" id="contributors">
 <h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <a href="https://github.com/ProjectPythia/cookbook-template/graphs/contributors">
@@ -366,14 +410,15 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 <div class="section" id="structure">
 <h2>Structure<a class="headerlink" href="#structure" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>(State one or more sections that will comprise the notebook. E.g., <em>This cookbook is broken up into two main sections - “Foundations” and “Example Workflows.”</em> Then, describe each section below.)</p>
-<div class="section" id="section-1-replace-with-the-title-of-this-section-e-g-foundations">
-<h3>Section 1 ( Replace with the title of this section, e.g. “Foundations” )<a class="headerlink" href="#section-1-replace-with-the-title-of-this-section-e-g-foundations" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>(Add content for this section, e.g., “The foundational content includes … “)</p>
+<p>This cookbook currently consists of two notebooks that access, regrid, and visualize the ARCO ERA-5 repository.</p>
+<p>Additional notebooks will follow.</p>
+<div class="section" id="section-1-basic-visualization">
+<h3>Section 1 ( “Basic Visualization”)<a class="headerlink" href="#section-1-basic-visualization" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>This notebook reads in a sea-level pressure ERA-5 grid, regrids from Gaussian to Cartesian coordinates, and visualizes the data with Matplotlib and Cartopy.</p>
 </div>
-<div class="section" id="section-2-replace-with-the-title-of-this-section-e-g-example-workflows">
-<h3>Section 2 ( Replace with the title of this section, e.g. “Example workflows” )<a class="headerlink" href="#section-2-replace-with-the-title-of-this-section-e-g-example-workflows" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>(Add content for this section, e.g., “Example workflows include … “)</p>
+<div class="section" id="section-2-interactive-visualization-1">
+<h3>Section 2 ( “Interactive Visualization 1” )<a class="headerlink" href="#section-2-interactive-visualization-1" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<p>This notebook reads in sea-level pressure and 2-meter temperature ERA-5 grids, regrids as in the first notebook, and visualizes the data in an interactive manner using [Geoviews](https://geoviews.org].</p>
 </div>
 </div>
 <div class="section" id="running-the-notebooks">
@@ -399,21 +444,20 @@ Jupyter</a>.</p>
 <div class="section" id="running-on-your-own-machine">
 <h3>Running on Your Own Machine<a class="headerlink" href="#running-on-your-own-machine" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>If you are interested in running this material locally on your computer, you will need to follow this workflow:</p>
-<p>(Replace “cookbook-example” with the title of your cookbooks)</p>
 <ol class="arabic">
-<li><p>Clone the <code class="docutils literal notranslate"><span class="pre">https://github.com/ProjectPythia/cookbook-example</span></code> repository:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ProjectPythia/cookbook-example.git
+<li><p>Clone the <code class="docutils literal notranslate"><span class="pre">https://github.com/ProjectPythia/ERA5_Interactive</span></code> repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ProjectPythia/ERA5_Interactive.git
 </pre></div>
 </div>
 </li>
-<li><p>Move into the <code class="docutils literal notranslate"><span class="pre">cookbook-example</span></code> directory</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>cookbook-example
+<li><p>Move into the <code class="docutils literal notranslate"><span class="pre">ERA5_Interactive</span></code> directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>ERA5_Interactive
 </pre></div>
 </div>
 </li>
-<li><p>Create and activate your conda environment from the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
-conda<span class="w"> </span>activate<span class="w"> </span>cookbook-example
+<li><p>Create and activate your conda/mamba environment from the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
+mamba<span class="w"> </span>activate<span class="w"> </span>cookbook-example
 </pre></div>
 </div>
 </li>
@@ -453,10 +497,10 @@ jupyter<span class="w"> </span>lab
               </div>
               <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="notebooks/notebook-template.html" title="next page">
+    <a class='right-next' id="next-link" href="notebooks/01BasicVisualization.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Project Pythia Notebook Template</p>
+        <p class="prev-next-title">01_BasicVisualization</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -503,9 +547,9 @@ jupyter<span class="w"> </span>lab
         <p class="py-1 m-0">
             &copy;&nbsp;2023.
         
-          By the <a href="https://projectpythia.org/">Project Pythia</a> Community.
+          By Michael Barletta and Kevin Tyle.
         
-          Last updated on 20 June 2023.
+          Last updated on 24 June 2023.
         </p>
       </div>
     </div>

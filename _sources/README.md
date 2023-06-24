@@ -1,19 +1,62 @@
 <img src="thumbnail.png" alt="thumbnail" width="300"/>
 
-# (Replace_with_your_title) Cookbook
+# ARCO ERA-5 Interactive Visualization Cookbook
 
-[![nightly-build](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml)
-[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
+[![nightly-build](https://github.com/ProjectPythia/ERA5_Interactive/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/ERA5_Interactive/actions/workflows/nightly-build.yaml)
+[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/ERA5_Interactive/main?labpath=notebooks)
 
-This Project Pythia Cookbook covers ... (replace `...` with the main subject of your cookbook ... e.g., _working with radar data in Python_)
+A team at [Google Research & Cloud](https://research.google/) are making parts of the [ECMWF Reanalysis version 5](https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5) (aka **ERA-5**) accessible in a [Analysis Ready, Cloud Optimized](https://www.frontiersin.org/articles/10.3389/fclim.2021.782909/full) (aka **ARCO**) format.
+
+This Project Pythia Cookbook covers accessing, regridding, and visualizing this reanalysis data.
 
 ## Motivation
 
-(Add a few sentences stating why this cookbook will be useful. What skills will you, "the chef", gain once you have reached the end of the cookbook?)
+The ERA-5 represents the current state-of-the-art meteorological reanalysis, extending from well back into the 20th century to the present. While the data is freely-available for download by archival centers such as [Copernicus](https://www.copernicus.eu/en) and [RDA](https://rda.ucar.edu/), the data format and directory structure are typically not well-suited for interactive exploration. Specifically, parameters of interest are stored in individual files, for a limited period of time.
+
+A team at Google Cloud and Research has made interactive exploration much more tenable by representing the data in [Zarr](https://zarr.readthedocs.io/en/stable/) format. Each Zarr file represents a specific "class" of meteorological data, such as:
+
+1. Model Level Wind
+2. Model Level Moisture
+3. Single Level Surface
+4. Single Level Reanalysis
+5. Single Level Forecast
+
+Within each Zarr file, a variety of meteorological parameters, spanning the current period of record (1 January 1979 --> 31 August 2021) of the ARCO ERA-5 repository exist.
+
+In the notebooks which comprise this Cookbook, we demonstrate the following:
+
+1. Access parameters of interest from the Zarr store
+2. Regrid from model native (Guassian) to lat-lon (Cartesian) coordinates
+3. Plot a map at a specific time using Matplotlib and Cartopy
+4. Create interactive visualizations, leveraging the [Holoviz](https://holoviz.org) ecosystem
+
+
 
 ## Authors
 
-[First Author](@first-author), [Second Author](@second-author), etc. _Acknowledge primary content authors here_
+[Kevin Tyle](@ktyle), [Michael Barletta](@Michael-Barletta)
+
+We also gratefully acknowledge the Google Cloud Research team for making an ARCO-friendly version of the ERA-5 available. Citations for their effort and the ERA-5 reanalysis are below:
+
+- Carver, Robert W, and Merose, Alex. (2023): ARCO-ERA5: An Analysis-Ready Cloud-Optimized Reanalysis Dataset. 22nd Conf. on AI for Env. Science, Denver, CO, Amer. Meteo. Soc, 4A.1, https://ams.confex.com/ams/103ANNUAL/meetingapp.cgi/Paper/415842
+- Hersbach, H., Bell, B., Berrisford, P., Hirahara, S., Horányi, A., 
+Muñoz‐Sabater, J., Nicolas, J., Peubey, C., Radu, R., Schepers, D., 
+Simmons, A., Soci, C., Abdalla, S., Abellan, X., Balsamo, G., 
+Bechtold, P., Biavati, G., Bidlot, J., Bonavita, M., De Chiara, G., 
+Dahlgren, P., Dee, D., Diamantakis, M., Dragani, R., Flemming, J., 
+Forbes, R., Fuentes, M., Geer, A., Haimberger, L., Healy, S., 
+Hogan, R.J., Hólm, E., Janisková, M., Keeley, S., Laloyaux, P., 
+Lopez, P., Lupu, C., Radnoti, G., de Rosnay, P., Rozum, I., Vamborg, F.,
+Villaume, S., Thépaut, J-N. (2017): Complete ERA5: Fifth generation of 
+ECMWF atmospheric reanalyses of the global climate. Copernicus Climate 
+Change Service (C3S) Data Store (CDS).
+Hersbach et al, (2017) was downloaded from the Copernicus Climate Change 
+Service (C3S) Climate Data Store. We thank C3S for allowing us to 
+redistribute the data.
+The results contain modified Copernicus Climate Change Service 
+information 2022. Neither the European Commission nor ECMWF is 
+responsible for any use that may be made of the Copernicus information 
+or data it contains.
 
 ### Contributors
 
@@ -23,15 +66,17 @@ This Project Pythia Cookbook covers ... (replace `...` with the main subject of 
 
 ## Structure
 
-(State one or more sections that will comprise the notebook. E.g., _This cookbook is broken up into two main sections - "Foundations" and "Example Workflows."_ Then, describe each section below.)
+This cookbook currently consists of two notebooks that access, regrid, and visualize the ARCO ERA-5 repository.
 
-### Section 1 ( Replace with the title of this section, e.g. "Foundations" )
+Additional notebooks will follow.
 
-(Add content for this section, e.g., "The foundational content includes ... ")
+### Section 1 ( "Basic Visualization")
 
-### Section 2 ( Replace with the title of this section, e.g. "Example workflows" )
+This notebook reads in a sea-level pressure ERA-5 grid, regrids from Gaussian to Cartesian coordinates, and visualizes the data with Matplotlib and Cartopy.
 
-(Add content for this section, e.g., "Example workflows include ... ")
+### Section 2 ( "Interactive Visualization 1" )
+
+This notebook reads in sea-level pressure and 2-meter temperature ERA-5 grids, regrids as in the first notebook, and visualizes the data in an interactive manner using [Geoviews](https://geoviews.org].
 
 ## Running the Notebooks
 
@@ -58,22 +103,20 @@ Jupyter](https://foundations.projectpythia.org/foundations/getting-started-jupyt
 
 If you are interested in running this material locally on your computer, you will need to follow this workflow:
 
-(Replace "cookbook-example" with the title of your cookbooks)
-
-1. Clone the `https://github.com/ProjectPythia/cookbook-example` repository:
+1. Clone the `https://github.com/ProjectPythia/ERA5_Interactive` repository:
 
    ```bash
-    git clone https://github.com/ProjectPythia/cookbook-example.git
+    git clone https://github.com/ProjectPythia/ERA5_Interactive.git
    ```
 
-1. Move into the `cookbook-example` directory
+1. Move into the `ERA5_Interactive` directory
    ```bash
-   cd cookbook-example
+   cd ERA5_Interactive
    ```
-1. Create and activate your conda environment from the `environment.yml` file
+1. Create and activate your conda/mamba environment from the `environment.yml` file
    ```bash
-   conda env create -f environment.yml
-   conda activate cookbook-example
+   mamba env create -f environment.yml
+   mamba activate cookbook-example
    ```
 1. Move into the `notebooks` directory and start up Jupyterlab
    ```bash
