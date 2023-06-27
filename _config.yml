@@ -13,7 +13,10 @@ tags:
   domains:
     - meteorology
   packages:
-    - zarr, geoviews, panel, xarray
+    - zarr
+    - geoviews
+    - panel
+    - xarray
 
 execute:
   # To execute notebooks via a Binder instead, replace 'cache' with 'binder'
