@@ -4,6 +4,7 @@
 
 [![nightly-build](https://github.com/ProjectPythia/ERA5_interactive-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/ERA5_interactive-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/ERA5_interactive-cookbook/main?labpath=notebooks)
+[![DOI](https://zenodo.org/badge/657280462.svg)](https://zenodo.org/badge/latestdoi/657280462)
 
 A team at [Google Research & Cloud](https://research.google/) are making parts of the [ECMWF Reanalysis version 5](https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5) (aka **ERA-5**) accessible in a [Analysis Ready, Cloud Optimized](https://www.frontiersin.org/articles/10.3389/fclim.2021.782909/full) (aka **ARCO**) format.
 
@@ -30,8 +31,6 @@ In the notebooks which comprise this Cookbook, we demonstrate the following:
 3. Plot a map at a specific time using Matplotlib and Cartopy
 4. Create interactive visualizations, leveraging the [Holoviz](https://holoviz.org) ecosystem
 
-
-
 ## Authors
 
 [Kevin Tyle](https://github.com/ktyle), [Michael Barletta](https://github.com/Michael-Barletta)
@@ -39,24 +38,24 @@ In the notebooks which comprise this Cookbook, we demonstrate the following:
 We also gratefully acknowledge the Google Cloud Research team for making an ARCO-friendly version of the ERA-5 available. Citations for their effort and the ERA-5 reanalysis are below:
 
 - Carver, Robert W, and Merose, Alex. (2023): ARCO-ERA5: An Analysis-Ready Cloud-Optimized Reanalysis Dataset. 22nd Conf. on AI for Env. Science, Denver, CO, Amer. Meteo. Soc, 4A.1, https://ams.confex.com/ams/103ANNUAL/meetingapp.cgi/Paper/415842
-- Hersbach, H., Bell, B., Berrisford, P., Hirahara, S., Horányi, A., 
-Muñoz‐Sabater, J., Nicolas, J., Peubey, C., Radu, R., Schepers, D., 
-Simmons, A., Soci, C., Abdalla, S., Abellan, X., Balsamo, G., 
-Bechtold, P., Biavati, G., Bidlot, J., Bonavita, M., De Chiara, G., 
-Dahlgren, P., Dee, D., Diamantakis, M., Dragani, R., Flemming, J., 
-Forbes, R., Fuentes, M., Geer, A., Haimberger, L., Healy, S., 
-Hogan, R.J., Hólm, E., Janisková, M., Keeley, S., Laloyaux, P., 
-Lopez, P., Lupu, C., Radnoti, G., de Rosnay, P., Rozum, I., Vamborg, F.,
-Villaume, S., Thépaut, J-N. (2017): Complete ERA5: Fifth generation of 
-ECMWF atmospheric reanalyses of the global climate. Copernicus Climate 
-Change Service (C3S) Data Store (CDS).
-Hersbach et al, (2017) was downloaded from the Copernicus Climate Change 
-Service (C3S) Climate Data Store. We thank C3S for allowing us to 
-redistribute the data.
-The results contain modified Copernicus Climate Change Service 
-information 2022. Neither the European Commission nor ECMWF is 
-responsible for any use that may be made of the Copernicus information 
-or data it contains.
+- Hersbach, H., Bell, B., Berrisford, P., Hirahara, S., Horányi, A.,
+  Muñoz‐Sabater, J., Nicolas, J., Peubey, C., Radu, R., Schepers, D.,
+  Simmons, A., Soci, C., Abdalla, S., Abellan, X., Balsamo, G.,
+  Bechtold, P., Biavati, G., Bidlot, J., Bonavita, M., De Chiara, G.,
+  Dahlgren, P., Dee, D., Diamantakis, M., Dragani, R., Flemming, J.,
+  Forbes, R., Fuentes, M., Geer, A., Haimberger, L., Healy, S.,
+  Hogan, R.J., Hólm, E., Janisková, M., Keeley, S., Laloyaux, P.,
+  Lopez, P., Lupu, C., Radnoti, G., de Rosnay, P., Rozum, I., Vamborg, F.,
+  Villaume, S., Thépaut, J-N. (2017): Complete ERA5: Fifth generation of
+  ECMWF atmospheric reanalyses of the global climate. Copernicus Climate
+  Change Service (C3S) Data Store (CDS).
+  Hersbach et al, (2017) was downloaded from the Copernicus Climate Change
+  Service (C3S) Climate Data Store. We thank C3S for allowing us to
+  redistribute the data.
+  The results contain modified Copernicus Climate Change Service
+  information 2022. Neither the European Commission nor ECMWF is
+  responsible for any use that may be made of the Copernicus information
+  or data it contains.
 
 ### Contributors
 
