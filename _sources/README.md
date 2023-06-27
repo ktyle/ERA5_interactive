@@ -2,8 +2,8 @@
 
 # ARCO ERA-5 Interactive Visualization Cookbook
 
-[![nightly-build](https://github.com/ProjectPythia/ERA5_Interactive/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/ERA5_Interactive/actions/workflows/nightly-build.yaml)
-[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/ERA5_Interactive/main?labpath=notebooks)
+[![nightly-build](https://github.com/ProjectPythia/ERA5_interactive-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/ERA5_interactive-cookbook/actions/workflows/nightly-build.yaml)
+[![Binder](https://binder.projectpythia.org/badge_logo.svg)](https://binder.projectpythia.org/v2/gh/ProjectPythia/ERA5_interactive-cookbook/main?labpath=notebooks)
 
 A team at [Google Research & Cloud](https://research.google/) are making parts of the [ECMWF Reanalysis version 5](https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5) (aka **ERA-5**) accessible in a [Analysis Ready, Cloud Optimized](https://www.frontiersin.org/articles/10.3389/fclim.2021.782909/full) (aka **ARCO**) format.
 
@@ -34,7 +34,7 @@ In the notebooks which comprise this Cookbook, we demonstrate the following:
 
 ## Authors
 
-[Kevin Tyle](@ktyle), [Michael Barletta](@Michael-Barletta)
+[Kevin Tyle](https://github.com/ktyle), [Michael Barletta](https://github.com/Michael-Barletta)
 
 We also gratefully acknowledge the Google Cloud Research team for making an ARCO-friendly version of the ERA-5 available. Citations for their effort and the ERA-5 reanalysis are below:
 
@@ -60,8 +60,8 @@ or data it contains.
 
 ### Contributors
 
-<a href="https://github.com/ProjectPythia/cookbook-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ProjectPythia/cookbook-template" />
+<a href="https://github.com/ProjectPythia/ERA5_interactive-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ProjectPythia/ERA5_interactive-cookbook" />
 </a>
 
 ## Structure
@@ -70,13 +70,13 @@ This cookbook currently consists of two notebooks that access, regrid, and visua
 
 Additional notebooks will follow.
 
-### Section 1 ( "Basic Visualization")
+### Section 1 ( "Basic Visualization" )
 
 This notebook reads in a sea-level pressure ERA-5 grid, regrids from Gaussian to Cartesian coordinates, and visualizes the data with Matplotlib and Cartopy.
 
 ### Section 2 ( "Interactive Visualization 1" )
 
-This notebook reads in sea-level pressure and 2-meter temperature ERA-5 grids, regrids as in the first notebook, and visualizes the data in an interactive manner using [Geoviews](https://geoviews.org].
+This notebook reads in sea-level pressure and 2-meter temperature ERA-5 grids, regrids as in the first notebook, and visualizes the data in an interactive manner using [Geoviews](https://geoviews.org).
 
 ## Running the Notebooks
 
@@ -103,20 +103,20 @@ Jupyter](https://foundations.projectpythia.org/foundations/getting-started-jupyt
 
 If you are interested in running this material locally on your computer, you will need to follow this workflow:
 
-1. Clone the `https://github.com/ProjectPythia/ERA5_Interactive` repository:
+1. Clone the `https://github.com/ProjectPythia/ERA5_interactive-cookbook` repository:
 
    ```bash
-    git clone https://github.com/ProjectPythia/ERA5_Interactive.git
+    git clone https://github.com/ProjectPythia/ERA5_interactive-cookbook.git
    ```
 
-1. Move into the `ERA5_Interactive` directory
+1. Move into the `ERA5_interactive-cookbook` directory
    ```bash
-   cd ERA5_Interactive
+   cd ERA5_interactive-cookbook
    ```
 1. Create and activate your conda/mamba environment from the `environment.yml` file
    ```bash
    mamba env create -f environment.yml
-   mamba activate cookbook-example
+   mamba activate ERA5_interactive
    ```
 1. Move into the `notebooks` directory and start up Jupyterlab
    ```bash

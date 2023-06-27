@@ -311,7 +311,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#section-1-basic-visualization">
-     Section 1 ( “Basic Visualization”)
+     Section 1 ( “Basic Visualization” )
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -352,8 +352,8 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
   <a class="reference internal image-reference" href="_images/thumbnail.png"><img alt="thumbnail" src="_images/thumbnail.png" style="width: 300px;" /></a>
 <div class="tex2jax_ignore mathjax_ignore section" id="arco-era-5-interactive-visualization-cookbook">
 <h1>ARCO ERA-5 Interactive Visualization Cookbook<a class="headerlink" href="#arco-era-5-interactive-visualization-cookbook" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
-<p><a class="reference external" href="https://github.com/ProjectPythia/ERA5_Interactive/actions/workflows/nightly-build.yaml"><img alt="nightly-build" src="https://github.com/ProjectPythia/ERA5_Interactive/actions/workflows/nightly-build.yaml/badge.svg" /></a>
-<a class="reference external" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/ERA5_Interactive/main?labpath=notebooks"><img alt="Binder" src="https://binder.projectpythia.org/badge_logo.svg" /></a></p>
+<p><a class="reference external" href="https://github.com/ProjectPythia/ERA5_interactive-cookbook/actions/workflows/nightly-build.yaml"><img alt="nightly-build" src="https://github.com/ProjectPythia/ERA5_interactive-cookbook/actions/workflows/nightly-build.yaml/badge.svg" /></a>
+<a class="reference external" href="https://binder.projectpythia.org/v2/gh/ProjectPythia/ERA5_interactive-cookbook/main?labpath=notebooks"><img alt="Binder" src="https://binder.projectpythia.org/badge_logo.svg" /></a></p>
 <p>A team at <a class="reference external" href="https://research.google/">Google Research &amp; Cloud</a> are making parts of the <a class="reference external" href="https://www.ecmwf.int/en/forecasts/dataset/ecmwf-reanalysis-v5">ECMWF Reanalysis version 5</a> (aka <strong>ERA-5</strong>) accessible in a <a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fclim.2021.782909/full">Analysis Ready, Cloud Optimized</a> (aka <strong>ARCO</strong>) format.</p>
 <p>This Project Pythia Cookbook covers accessing, regridding, and visualizing this reanalysis data.</p>
 <div class="section" id="motivation">
@@ -378,7 +378,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </div>
 <div class="section" id="authors">
 <h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p><span class="xref myst">Kevin Tyle</span>, <span class="xref myst">Michael Barletta</span></p>
+<p><a class="reference external" href="https://github.com/ktyle">Kevin Tyle</a>, <a class="reference external" href="https://github.com/Michael-Barletta">Michael Barletta</a></p>
 <p>We also gratefully acknowledge the Google Cloud Research team for making an ARCO-friendly version of the ERA-5 available. Citations for their effort and the ERA-5 reanalysis are below:</p>
 <ul class="simple">
 <li><p>Carver, Robert W, and Merose, Alex. (2023): ARCO-ERA5: An Analysis-Ready Cloud-Optimized Reanalysis Dataset. 22nd Conf. on AI for Env. Science, Denver, CO, Amer. Meteo. Soc, 4A.1, https://ams.confex.com/ams/103ANNUAL/meetingapp.cgi/Paper/415842</p></li>
@@ -403,8 +403,8 @@ or data it contains.</p></li>
 </ul>
 <div class="section" id="contributors">
 <h3>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<a href="https://github.com/ProjectPythia/cookbook-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ProjectPythia/cookbook-template" />
+<a href="https://github.com/ProjectPythia/ERA5_interactive-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ProjectPythia/ERA5_interactive-cookbook" />
 </a>
 </div>
 </div>
@@ -413,12 +413,12 @@ or data it contains.</p></li>
 <p>This cookbook currently consists of two notebooks that access, regrid, and visualize the ARCO ERA-5 repository.</p>
 <p>Additional notebooks will follow.</p>
 <div class="section" id="section-1-basic-visualization">
-<h3>Section 1 ( “Basic Visualization”)<a class="headerlink" href="#section-1-basic-visualization" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
+<h3>Section 1 ( “Basic Visualization” )<a class="headerlink" href="#section-1-basic-visualization" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>This notebook reads in a sea-level pressure ERA-5 grid, regrids from Gaussian to Cartesian coordinates, and visualizes the data with Matplotlib and Cartopy.</p>
 </div>
 <div class="section" id="section-2-interactive-visualization-1">
 <h3>Section 2 ( “Interactive Visualization 1” )<a class="headerlink" href="#section-2-interactive-visualization-1" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
-<p>This notebook reads in sea-level pressure and 2-meter temperature ERA-5 grids, regrids as in the first notebook, and visualizes the data in an interactive manner using [Geoviews](https://geoviews.org].</p>
+<p>This notebook reads in sea-level pressure and 2-meter temperature ERA-5 grids, regrids as in the first notebook, and visualizes the data in an interactive manner using <a class="reference external" href="https://geoviews.org">Geoviews</a>.</p>
 </div>
 </div>
 <div class="section" id="running-the-notebooks">
@@ -445,19 +445,19 @@ Jupyter</a>.</p>
 <h3>Running on Your Own Machine<a class="headerlink" href="#running-on-your-own-machine" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>If you are interested in running this material locally on your computer, you will need to follow this workflow:</p>
 <ol class="arabic">
-<li><p>Clone the <code class="docutils literal notranslate"><span class="pre">https://github.com/ProjectPythia/ERA5_Interactive</span></code> repository:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ProjectPythia/ERA5_Interactive.git
+<li><p>Clone the <code class="docutils literal notranslate"><span class="pre">https://github.com/ProjectPythia/ERA5_interactive-cookbook</span></code> repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ProjectPythia/ERA5_interactive-cookbook.git
 </pre></div>
 </div>
 </li>
-<li><p>Move into the <code class="docutils literal notranslate"><span class="pre">ERA5_Interactive</span></code> directory</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>ERA5_Interactive
+<li><p>Move into the <code class="docutils literal notranslate"><span class="pre">ERA5_interactive-cookbook</span></code> directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>ERA5_interactive-cookbook
 </pre></div>
 </div>
 </li>
 <li><p>Create and activate your conda/mamba environment from the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
-mamba<span class="w"> </span>activate<span class="w"> </span>cookbook-example
+mamba<span class="w"> </span>activate<span class="w"> </span>ERA5_interactive
 </pre></div>
 </div>
 </li>
