@@ -26,9 +26,9 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-pythia-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
@@ -42,7 +42,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/design-tabs.js"></script>
     <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -373,7 +373,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 <h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <p>The ERA-5 represents the current state-of-the-art meteorological reanalysis, extending from well back into the 20th century to the present. While the data is freely-available for download by archival centers such as <a class="reference external" href="https://www.copernicus.eu/en">Copernicus</a> and <a class="reference external" href="https://rda.ucar.edu/">RDA</a>, the data format and directory structure are typically not well-suited for interactive exploration. Specifically, parameters of interest are stored in individual files, for a limited period of time.</p>
 <p>A team at Google Cloud and Research has made interactive exploration much more tenable by representing the data in <a class="reference external" href="https://zarr.readthedocs.io/en/stable/">Zarr</a> format. Each Zarr file represents a specific “class” of meteorological data, such as:</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Model Level Wind</p></li>
 <li><p>Model Level Moisture</p></li>
 <li><p>Single Level Surface</p></li>
@@ -382,7 +382,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
 </ol>
 <p>Within each Zarr file, a variety of meteorological parameters, spanning the current period of record (1 January 1979 –&gt; 31 August 2021) of the ARCO ERA-5 repository exist.</p>
 <p>In the notebooks which comprise this Cookbook, we demonstrate the following:</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>Access parameters of interest from the Zarr store</p></li>
 <li><p>Regrid from model native (Guassian) to lat-lon (Cartesian) coordinates</p></li>
 <li><p>Plot a map at a specific time using Matplotlib and Cartopy</p></li>
@@ -457,7 +457,7 @@ Jupyter</a>.</p>
 <div class="section" id="running-on-your-own-machine">
 <h3>Running on Your Own Machine<a class="headerlink" href="#running-on-your-own-machine" title="Permalink to this headline"><i class="fas fa-link"></i></a></h3>
 <p>If you are interested in running this material locally on your computer, you will need to follow this workflow:</p>
-<ol class="arabic">
+<ol>
 <li><p>Clone the <code class="docutils literal notranslate"><span class="pre">https://github.com/ProjectPythia/ERA5_interactive-cookbook</span></code> repository:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ProjectPythia/ERA5_interactive-cookbook.git
 </pre></div>
@@ -564,7 +564,7 @@ jupyter<span class="w"> </span>lab
         
           By Michael Barletta and Kevin Tyle.
         
-          Last updated on 31 July 2023.
+          Last updated on 29 February 2024.
         </p>
       </div>
     </div>
