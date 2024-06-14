@@ -75,7 +75,8 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Creating a Basic Interactive Dashboard with hvPlot" href="03_intro_to_interactive_viz_hvplot.html" />
+    <link rel="next" title="Access ERA5 data from NCAR’s Research Data Archive and compute anomaly" href="06_era5_anomaly.html" />
+    <link rel="prev" title="Creating an Interactive Dashboard using hvPlot and Panel" href="04_dashboard.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
     <meta name="docbuild:last-update" content="14 June 2024"/>
@@ -365,15 +366,17 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="how-to-cite.html">How to Cite This Cookbook</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualization notebooks</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Visualization Notebooks</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01BasicVisualization.html">01_BasicVisualization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02InteractiveVisualization.html">02_InteractiveVisualization Part 1: Geoviews</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_intro_to_interactive_viz_hvplot.html">Creating a Basic Interactive Dashboard with <code class="docutils literal notranslate"><span class="pre">hvPlot</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="01BasicVisualization.html">Basic Visualization using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">Cartopy</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="02InteractiveVisualization.html">Interactive Visualization using <code class="docutils literal notranslate"><span class="pre">GeoViews</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_hvplot.html">Interactive Visualuzation using <code class="docutils literal notranslate"><span class="pre">hvPlot</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_dashboard.html">Creating an Interactive Dashboard using <code class="docutils literal notranslate"><span class="pre">hvPlot</span></code> and <code class="docutils literal notranslate"><span class="pre">Panel</span></code></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Preprocessing Notebooks for NCAR RDA</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Generate annual/yearly zarr stores from hourly ERA5 NetCDF files on NCAR’s Research Data Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_era5_anomaly.html">Access ERA5 data from NCAR’s Research Data Archive and compute anomaly</a></li>
 </ul>
 
     </div>
@@ -405,8 +408,8 @@
                     
   <section class="tex2jax_ignore mathjax_ignore" id="generate-annual-yearly-zarr-stores-from-hourly-era5-netcdf-files-on-ncars-research-data-archive">
 <h1>Generate annual/yearly zarr stores from hourly ERA5 NetCDF files on NCAR’s Research Data Archive<a class="headerlink" href="#generate-annual-yearly-zarr-stores-from-hourly-era5-netcdf-files-on-ncars-research-data-archive" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
-<section id="warning-please-read">
-<h2>Warning: Please Read<a class="headerlink" href="#warning-please-read" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<section id="overview-and-warning-please-read">
+<h2>Overview and Warning: Please Read<a class="headerlink" href="#overview-and-warning-please-read" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
 <ul class="simple">
 <li><p>ERA5 data on NCAR is stored in hourly NetCDF files. Therefore, it is necessary to create intermediate ARCO datasets for fast processing.</p></li>
 <li><p>In this notebook, we read hourly data from NCAR’s publicly accessible ERA5 collection using an intake catalog, compute the annual means and store the result using zarr stores.</p></li>
@@ -417,6 +420,35 @@
 </ol>
 </li>
 <li><p>Otherwise, please run this script once to generate the annual means.</p></li>
+</ul>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"><i class="fas fa-link"></i></a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Concepts</p></th>
+<th class="head"><p>Importance</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://foundations.projectpythia.org/core/xarray.html">Intro to Xarray</a></p></td>
+<td><p>Necessary</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://projectpythia.org/intake-cookbook/notebooks/intake_introduction.html">Intro to Intake</a></p></td>
+<td><p>Necessary</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://zarr.readthedocs.io/en/stable/">Understanding of Zarr</a></p></td>
+<td><p>Helpful</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="simple">
+<li><p><strong>Time to learn</strong>: 30 minutes</p></li>
 </ul>
 </section>
 <section id="imports">
@@ -3917,13 +3949,22 @@ Wall time: 389 ms
                     
 <div class="prev-next-area">
     <a class="left-prev"
-       href="03_intro_to_interactive_viz_hvplot.html"
+       href="04_dashboard.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Creating a Basic Interactive Dashboard with <code class="docutils literal notranslate"><span class="pre">hvPlot</span></code></p>
+        <p class="prev-next-title">Creating an Interactive Dashboard using <code class="docutils literal notranslate"><span class="pre">hvPlot</span></code> and <code class="docutils literal notranslate"><span class="pre">Panel</span></code></p>
       </div>
+    </a>
+    <a class="right-next"
+       href="06_era5_anomaly.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Access ERA5 data from NCAR’s Research Data Archive and compute anomaly</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                   </footer>
@@ -3942,7 +3983,8 @@ Wall time: 389 ms
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#warning-please-read">Warning: Please Read</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-and-warning-please-read">Overview and Warning: Please Read</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#imports">Imports</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-dask-cluster">Create a Dask cluster</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dask-introduction">Dask Introduction</a></li>
