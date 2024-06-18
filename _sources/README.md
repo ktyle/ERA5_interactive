@@ -33,7 +33,7 @@ In the notebooks which comprise this Cookbook, we demonstrate the following:
 
 ## Authors
 
-[Kevin Tyle](https://github.com/ktyle), [Michael Barletta](https://github.com/Michael-Barletta)
+[Kevin Tyle](https://github.com/ktyle), [Michael Barletta](https://github.com/Michael-Barletta), [Negin Sobhani](https://github.com/negin513), [Nicholas Cote](https://github.com/ncote) , [Harsha Hampapura](https://github.com/hrhampapura) , and [Philip Chmielowiec](https://github.com/philip2c)
 
 We also gratefully acknowledge the Google Cloud Research team for making an ARCO-friendly version of the ERA-5 available. Citations for their effort and the ERA-5 reanalysis are below:
 
@@ -65,7 +65,7 @@ We also gratefully acknowledge the Google Cloud Research team for making an ARCO
 
 ## Structure
 
-This cookbook currently consists of two notebooks that access, regrid, and visualize the ARCO ERA-5 repository.
+This cookbook currently consists of multiple  notebooks that access, regrid, and visualize the ARCO ERA-5 repository. Additionally we cover a section on how to preprocess and create ARCO files. 
 
 Additional notebooks will follow.
 
@@ -73,9 +73,23 @@ Additional notebooks will follow.
 
 This notebook reads in a sea-level pressure ERA-5 grid, regrids from Gaussian to Cartesian coordinates, and visualizes the data with Matplotlib and Cartopy.
 
-### Section 2 ( "Interactive Visualization 1" )
+### Section 2 ( "Interactive Visualization Part 1: `GeoViews`" )
 
 This notebook reads in sea-level pressure and 2-meter temperature ERA-5 grids, regrids as in the first notebook, and visualizes the data in an interactive manner using [Geoviews](https://geoviews.org).
+
+### Section 3 ("Interactive Visualization Part 2: `hvPlot`")
+This notebook reads in annual average 2-m temperature from RDA's Zarr store and visualizes the data using `hvPlot`. The notebook also demonstrates how to create a simple interactive plot that allows the user to select a specific year and visualize the 2-m and how to create animations.
+
+### Section 4 ("Creating an Interactive Dashboard with `Panel`")
+This notebook demonstrates how to create an interactive dashboard using `Panel` that allows the user to select a specific year and visualize the 2-m temperature. 
+
+## Preprocessing Notebooks for NCAR RDA
+### Section 5 ( "Generate annual/yearly Zarr stores from hourly ERA5 NetCDF files on NCAR’s Research Data Archive")
+This notebook demonstrates how to preprocess hourly ERA5 NetCDF files from NCAR's Research Data Archive (RDA) and generate annual/yearly Zarr stores.
+
+### Section 6 ( "Calculate Temperature Anomalies")
+This notebook demonstrates how to calculate temperature anomalies from the annual 2-m temperature Zarr store generated in Section 5.
+
 
 ## Running the Notebooks
 
