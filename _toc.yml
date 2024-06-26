@@ -16,6 +16,6 @@ parts:
       - file: notebooks/05_data_preprocessing
       - file: notebooks/06_era5_anomaly
 
-  - caption: Creating the Dashboard in a Container 
+  - caption: Containerization 
     chapters:
       - file: notebooks/07_container_create
