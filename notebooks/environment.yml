@@ -2,6 +2,7 @@ name: ERA5_interactive
 channels:
   - conda-forge
 dependencies:
+  - aiohttp
   - fsspec
   - hvplot
   - nbconvert
