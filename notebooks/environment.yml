@@ -3,6 +3,7 @@ channels:
   - conda-forge
 dependencies:
   - aiohttp
+  - dask
   - datashader
   - fsspec
   - hvplot
