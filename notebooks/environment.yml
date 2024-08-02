@@ -6,3 +6,4 @@ dependencies:
   - panel
   - hvplot
   - nbconvert
+  - zarr
