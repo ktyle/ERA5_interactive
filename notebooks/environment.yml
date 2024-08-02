@@ -2,8 +2,9 @@ name: ERA5_interactive
 channels:
   - conda-forge
 dependencies:
-  - xarray
-  - panel
+  - fsspec
   - hvplot
   - nbconvert
+  - panel
+  - xarray
   - zarr
