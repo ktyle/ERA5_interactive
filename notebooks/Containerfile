@@ -14,7 +14,7 @@ WORKDIR /home/mambauser/app
 RUN git clone https://github.com/ProjectPythia/ERA5_interactive-cookbook.git
 
 # Create a conda environment from the environment.yml file included in the repo
-RUN micromamba env create -f ERA5_interactive-cookbook/environment.yml
+RUN micromamba env create -f ERA5_interactive-cookbook/notebooks/environment.yml
 # Activate the environment by providing ENV_NAME as an environment variable at runtime 
 
 # Copy the notebook with the panel application to the working directory

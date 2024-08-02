@@ -1,0 +1,7 @@
+name: ERA5_interactive
+channels:
+  - conda-forge
+dependencies:
+  - xarray
+  - panel
+  - hvplot
