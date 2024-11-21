@@ -1,0 +1,26 @@
+# Use the latest official micromamba image as the base image
+FROM python:slim
+
+# Update apt and install git
+RUN apt-get update && apt-get install -y git-all
+
+# Set the working directory in the container to /home/mambauser/app
+WORKDIR /home/python/app
+
+# Run git clone to get the repo contents in to /home/mambauser/app
+RUN git clone https://github.com/NicholasCote/ERA5_interactive-cookbook-ncote.git
+
+# Create a conda environment from the environment.yml file included in the repo
+RUN pip install -r ERA5_interactive-cookbook-ncote/notebooks/requirements.txt
+
+# Copy the notebook with the panel application to the working directory
+RUN mv ERA5_interactive-cookbook-ncote/notebooks/04_dashboard.ipynb .
+
+# Remove the rest of the repository as no other files are required 
+RUN rm -r ERA5_interactive-cookbook-ncote/
+
+# Make panel application port to the world outside this container
+EXPOSE 5006
+
+# Specify the command to run that starts the application
+CMD ["panel", "serve", "04_dashboard.ipynb", "--allow-websocket-origin=*"]

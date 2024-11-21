@@ -1,0 +1,9 @@
+aiohttp
+dask
+datashader
+fsspec
+hvplot
+nbconvert
+panel
+xarray
+zarr
